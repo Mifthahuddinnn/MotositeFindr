@@ -32,6 +32,7 @@
     "whatwg-fetch": "^3.6.19"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
     "aos": "^2.3.4",
     "regenerator-runtime": "^0.14.0",
     "sweetalert2": "^11.10.1"

@@ -3,6 +3,15 @@ class Jumbotron extends HTMLElement {
     this.render();
   }
 
+  set clickEvent(event) {
+    this._clickEvent = event;
+    this.render();
+  }
+
+  get value() {
+    return this.querySelector("#searchInput").value;
+  }
+
   render() {
     this.innerHTML = `
     <section class="jumbotron">
@@ -10,21 +19,22 @@ class Jumbotron extends HTMLElement {
         <div class="container-fluid py-5">
           <h1 class="fw-bold text-center pt-5" data-aos="fade-right">Find Your Lost Motorcycle</h1>
           <p class="text-center" data-aos="fade-left">Enter the details of your lost motorcycle to start the search</p>
-
-          <div class="form-input">
-            <input class="form-control" type="text" placeholder="Enter motor model" aria-label="default input example">
-          </div>
-
-          <div class="text-center mb-5">
-          
-            <a href="#/"><button class="btn-filter" type="button">Filter</button></a>
-            <a href="#/searchpages"><button class="btn-search" type="button">Search</button></a>
+          <div>
+            <div class="form-input">
+              <input id="searchInput" class="form-control" type="text" placeholder="Enter motor model" aria-label="default input example">
             </div>
 
+            <div class="text-center mb-5">
+              <a href="#/"><button class="btn-filter" type="button">Filter</button></a>
+              <a href="#/searchpages"><button class="btn-search" type="button" id="searchButton">Search</button></a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     `;
+
+    this.querySelector('#searchButton').addEventListener('click', this._clickEvent);
   }
 }
 

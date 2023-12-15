@@ -11,6 +11,7 @@ import '../styles/edit.css';
 import AOS from 'aos';
 import App from './views/app';
 import swRegister from './utils/sw-register';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const app = new App({
   content: document.querySelector('#mainContent'),

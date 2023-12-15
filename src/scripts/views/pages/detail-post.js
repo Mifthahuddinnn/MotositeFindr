@@ -18,6 +18,27 @@ const DetailPost = {
     console.log(motor);
     const detailContainer = document.querySelector('#detailMotor');
     detailContainer.innerHTML = detailPostCreator(motor);
+
+    const commentInput = document.querySelector('#commentInput');
+    const commentSubmitBtn = document.querySelector('#commentSubmitBtn');
+
+    commentSubmitBtn.addEventListener('click', async () => {
+      const body = commentInput.value.trim();
+
+      if (body !== '') {
+        try {
+          const response = await MotorSource.postComment(url.id, body );
+          if (response.success) {
+            this.afterRender();
+          } else {
+            alert(response.message || 'Failed to post comment');
+          }
+        } catch (error) {
+          console.error('Error posting comment:', error);
+          alert('Failed to post comment. Please try again.');
+        }
+      }
+    });
   },
 };
 

@@ -1,5 +1,4 @@
-import Swal from 'sweetalert2';
-import CONFIG from "../../globals/config";
+import MotorSource from '../../data/motor-source';
 
 const Login = {
     async render() {
@@ -58,39 +57,7 @@ const Login = {
             loginButton.textContent = 'Logging in...';
             loginButton.disabled = true;
 
-            try {
-                const response = await fetch(`${CONFIG.BASE_URL_API}login`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                });
-
-                if (!response.ok) {
-                    throw new Error('Login failed');
-                }
-
-                const responseData = await response.json();
-
-                // Store the token in localStorage
-                localStorage.setItem('authToken', responseData.token);
-
-                // Redirect to the search pages
-                window.location.href = '#/searchpages';
-            } catch (error) {
-                console.error('Login failed:', error.message);
-                // Show a SweetAlert2 error message
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Login Failed',
-                    text: 'Please check your credentials and try again.',
-                });
-            } finally {
-                // Reset loading state
-                loginButton.textContent = 'Login';
-                loginButton.disabled = false;
-            }
+            MotorSource.login(data);
         });
     },
 };
