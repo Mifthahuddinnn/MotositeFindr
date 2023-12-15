@@ -17,7 +17,7 @@ const PostedPage = {
             </section>
         `;
     },
-    
+
     async afterRender() {
         const dataMotor = await MotorSource.listMotor();
         console.log(dataMotor);
