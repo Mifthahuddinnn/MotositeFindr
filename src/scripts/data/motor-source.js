@@ -7,7 +7,7 @@ class MotorSource {
   }
 
   static async register(data) {
-    try{
+    try {
       const response = await fetch(API_ENDPOINT.REGISTER, {
         method: 'POST',
         headers: {
@@ -16,19 +16,19 @@ class MotorSource {
         body: JSON.stringify(data),
       });
 
-      if (response.ok){
+      if (response.ok) {
         window.location.href = '#/login';
       }
       const responseJson = await response.json();
       return responseJson;
-    }catch (error){
+    } catch (error) {
       console.error('Error fetching data:', error);
       throw error;
     }
   }
 
   static async login(data) {
-    try{
+    try {
       const response = await fetch(API_ENDPOINT.LOGIN, {
         method: 'POST',
         headers: {
@@ -47,15 +47,15 @@ class MotorSource {
     } catch (error) {
       console.error('Login failed:', error.message);
       // Show a SweetAlert2 error message
-        Swal.fire({
-          icon: 'error',
-          title: 'Login Failed',
-          text: 'Please check your credentials and try again.',
+      Swal.fire({
+        icon: 'error',
+        title: 'Login Failed',
+        text: 'Please check your credentials and try again.',
       });
     } finally {
-        // Reset loading state
-        loginButton.textContent = 'Login';
-        loginButton.disabled = false;
+      // Reset loading state
+      loginButton.textContent = 'Login';
+      loginButton.disabled = false;
     }
   }
 
@@ -88,7 +88,7 @@ class MotorSource {
   }
 
   static async postMotor(data) {
-    try{
+    try {
       const response = await fetch(API_ENDPOINT.POST_MOTOR, {
         method: 'POST',
         headers: {
@@ -97,31 +97,31 @@ class MotorSource {
         body: data,
       });
 
-      if (response.ok){
+      if (response.ok) {
         window.location.href = '#/searchpages';
       }
       const responseJson = await response.json();
       return responseJson;
-    }catch (error){
+    } catch (error) {
       console.error('Error fetching data:', error);
       throw error;
     }
   }
 
-static async searchMotor(keyword){
-  try{
-    // eslint-disable-next-line prefer-template
-    const response = await fetch(API_ENDPOINT.SEARCH_LIST + `?search=${keyword}`);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
+  static async searchMotor(keyword) {
+    try {
+      // eslint-disable-next-line prefer-template
+      const response = await fetch(API_ENDPOINT.SEARCH_LIST + `?search=${keyword}`);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
+      }
+      const responseJson = await response.json();
+      return responseJson;
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      throw error;
     }
-    const responseJson = await response.json();
-    return responseJson;
-  }catch (error){
-    console.error('Error fetching data:', error);
-    throw error;
   }
-}
 
   static async postComment(id, body) {
     try {
@@ -133,24 +133,52 @@ static async searchMotor(keyword){
         },
         body: JSON.stringify({ comment: { body } }),
       });
-  
+
       if (response.ok) {
         return { success: true };
       }
-  
+
       const contentType = response.headers.get('content-type');
-      
+
       if (contentType && contentType.includes('application/json')) {
         const responseJson = await response.json();
         return { success: false, message: responseJson.message || 'Gagal menambahkan komen!' };
-      } 
-        return { success: false, message: 'Anda perlu login terlebih dahulu' };
-      
+      }
+      return { success: false, message: 'Anda perlu login terlebih dahulu' };
+
     } catch (error) {
       console.error('Error posting comment:', error);
       throw error;
     }
-  }  
+  }
+
+  static async getLatestMotor() {
+    try {
+      const response = await fetch(`${API_ENDPOINT.LIST}/search/?sortBy=terbaru`);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
+      }
+      const responseJson = await response.json();
+      return responseJson.motors;
+    } catch (error) {
+      console.error('Error fetching latest motor data:', error);
+      throw error;
+    }
+  }
+
+  static async getOldestMotor() {
+    try {
+      const response = await fetch(`${API_ENDPOINT.LIST}/search/?sortBy=terlama`);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
+      }
+      const responseJson = await response.json();
+      return responseJson.motors;
+    } catch (error) {
+      console.error('Error fetching oldest motor data:', error);
+      throw error;
+    }
+  }
 }
 
 export default MotorSource;
