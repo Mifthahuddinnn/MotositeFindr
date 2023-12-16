@@ -52,3 +52,62 @@
   }
 
 }
+
+@media screen and (max-width: 576px) {
+  .searchpages {
+    margin-top: -3rem !important;
+  }
+
+  .card-searchpages {
+    width: 13rem !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-searchpages .card-title {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .searchpages {
+    margin-top: -3rem !important;
+  }
+
+  .card-searchpages {
+    width: 13em !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-searchpages .card-title {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .searchpages {
+    margin-top: -3rem !important;
+  }
+
+  .card-searchpages {
+    width: 100% !important;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-searchpages .card-title {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .card-searchpages {
+    width: 100% !important;
+    font-size: 18px;
+  }
+}
