@@ -7,7 +7,6 @@ require('@fortawesome/fontawesome-free/css/all.min.css');
 const PostedPage = {
     async render() {
         return `
-        
         <section class="jumbotron">
             <div class="p-5 mb-5">
                 <div class="container-fluid py-5">
@@ -32,6 +31,14 @@ const PostedPage = {
                     <br>
 
                     <a href="#/searchpages"><button class="btn-search" type="button" id="searchButton">Search</button></a>
+
+                    </div>
+                </div>
+            </section>
+            <section class="post">
+                <div class="container">
+                    <div class="row" id="listPost">
+                        
                     </div>
                 </div>
                 </div>
@@ -118,7 +125,6 @@ const PostedPage = {
                 throw error;
             }
         });
-
     },
 };
 

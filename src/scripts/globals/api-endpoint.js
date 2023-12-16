@@ -8,6 +8,8 @@ const API_ENDPOINT = {
   POST_MOTOR: `${CONFIG.BASE_URL_API}motors/create/upload`,
   SEARCH_LIST: `${CONFIG.BASE_URL_API}motors/search`,
   COMMENT: (id) => `${CONFIG.BASE_URL_API}motors/${id}/comments`,
+  DELETE_POST: (id) => `${CONFIG.BASE_URL_API}motors/${id}/deleted`,
+  DELETE_COMMENT: (idMotor, idComment) => `${CONFIG.BASE_URL_API}motors/${idMotor}/comments/${idComment}`
 };
 
 export default API_ENDPOINT;

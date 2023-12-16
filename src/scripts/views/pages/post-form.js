@@ -1,6 +1,5 @@
-import MotorSource from "../../data/motor-source";
-// eslint-disable-next-line import/no-unresolved, import/order
 import Swal from 'sweetalert2';
+import MotorSource from "../../data/motor-source";
 
 const FormPost = {
   async render() {
@@ -87,6 +86,8 @@ const FormPost = {
       }
     });
 
+    
+
     document.getElementById('formTambahData').addEventListener('submit', async (event) => {
       event.preventDefault();
 
@@ -96,6 +97,17 @@ const FormPost = {
       const dateTime = document.getElementById('dateTime').value;
       const image = document.getElementById('image').files[0];
       const description = document.getElementById('description').value;
+
+      if (!title || !licensePlate || !model || !dateTime || !image || !description) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Incomplete Form',
+          text: 'Please fill out all fields.',
+          color: '#00214D',
+          confirmButtonColor: '#00EBC7',
+        });
+        return;
+      }
 
       const formData = new FormData();
       formData.append('motor[title]', title);

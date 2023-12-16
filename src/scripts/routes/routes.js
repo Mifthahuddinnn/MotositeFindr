@@ -1,6 +1,5 @@
 import Contact from '../views/pages/contact';
 import Detail from '../views/pages/detail-post';
-import Edit from '../views/pages/edit';
 import FormPost from '../views/pages/post-form';
 import Home from '../views/pages/home';
 import Login from '../views/pages/login';
@@ -18,7 +17,6 @@ const routes = {
   '/login': Login,
   '/register': Register,
   '/contact': Contact,
-  '/edit': Edit,
 };
 
 export default routes;

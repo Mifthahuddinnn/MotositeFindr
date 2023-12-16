@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import MotorSource from '../../data/motor-source';
 
 const Login = {
@@ -46,6 +47,16 @@ const Login = {
         document.getElementById('loginButton').addEventListener('click', async () => {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
+            if (!email || !password) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please fill in all the form fields!',
+                    color: '#00214D',
+                    confirmButtonColor: '#00EBC7',
+                });
+                return;
+            }
 
             const data = {
                 email,

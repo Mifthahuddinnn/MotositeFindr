@@ -26,13 +26,13 @@ const detailPostCreator = (motor) => `
             <p class="description">${motor.description}</p>
 
             <div class="icon-detail">
-
-            <button type="button" class="btn btn-comment" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            <i class="fa-regular fa-comment"></i>
-            </button>
-
-            
-            <a class="icon-edit" href="#/edit"><i class="fa-regular fa-pen-to-square"></i></a>
+              <button type="button" class="btn btn-comment" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <i class="fa-regular fa-comment"></i>
+              </button>
+              
+              <button type="button" class="btn">
+                <i class="fa-solid fa-trash" id="deletePost" style="color: #ff0000;"></i>
+              </button>
             </div>
 
           </div>
@@ -62,8 +62,12 @@ const detailPostCreator = (motor) => `
           ${motor.comments.map((comments) => `
             <p class="user-comment"><i class="fa-solid fa-user"></i> ${comments.author.fullname}</p>
             <p>${comments.body}</p>
-            <a class="icon-comment-time" href="#/"><i class="fa-regular fa-comment"></i> <span> ${comments.dateTime}</span>
-            </a>
+            <p>
+              <span> ${comments.dateTime} </span>
+              <button type="button" class="btn">
+                <i class="fa-solid fa-trash" id="deleteComment" style="color: #ff0000;"></i>
+              </button>  
+            </p>
           `).join('')}
           </div>
 
