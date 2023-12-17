@@ -5,7 +5,7 @@ const postList = (motor) => `
             <div class="card-body">
             <a href="#/detail/${motor._id}" class="card-title-searchpages"><p>${motor.title}</p></a>
             <span class="badge bg-secondary">Motorcycle Help</span>
-            <p class="card-text"></i> ${motor.licensePlate}</p>
+            <p class="card-text">${motor.licensePlate}</p>
             </div>
         </div>
     </div>

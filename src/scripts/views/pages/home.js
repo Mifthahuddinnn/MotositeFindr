@@ -3,8 +3,8 @@ const Home = {
     return `
     <jumbotron-section></jumbotron-section>
     <statistic-section></statistic-section>
-    <stolen-section></stolen-section>
     <community-section></community-section>
+    <about-section></about-section>
     `;
   },
 

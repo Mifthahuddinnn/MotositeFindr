@@ -170,35 +170,85 @@ statistic-section {
 
 /* ========== STATISTIC ========== */
 
-/* ========== STOLEN ========== */
+/* ========== ABOUT ========== */
 
-stolen-section {
+about-section {
   margin-top: 5rem;
+  padding: 2rem 0; 
   border-bottom: 1px solid #eee;
 }
 
-.heading-stolen {
-  margin-top: 12rem;
+about-section .about {
+  text-align: justify;
 }
 
-.heading-stolen h2 {
-  font-size: 36px;
+#mainContent > about-section > section > div > div > div > div:nth-child(1) > div {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+#mainContent > about-section > section > div > div > div > div:nth-child(1) > div:hover {
+  border-color: #00EBC7;
+}
+
+#mainContent > about-section > section > div > div > div > div:nth-child(2) > div {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+#mainContent > about-section > section > div > div > div > div:nth-child(2) > div:hover {
+  border-color: #00EBC7;
+}
+
+#mainContent > about-section > section > div > div > div > div:nth-child(1) > div,
+#mainContent > about-section > section > div > div > div > div:nth-child(2) > div {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#mainContent > about-section > section > div > div > div > div:nth-child(1) > div:hover,
+#mainContent > about-section > section > div > div > div > div:nth-child(2) > div:hover {
+  box-shadow: 0 8px 16px rgba(0, 235, 199, 0.3);
+}
+
+#mainContent > about-section > section > div > div > div > div:nth-child(1) > div,
+#mainContent > about-section > section > div > div > div > div:nth-child(2) > div {
+  transition: border-color 0.3s ease, opacity 0.3s ease;
+}
+
+#mainContent > about-section > section > div > div > div > div:nth-child(1) > div:hover,
+#mainContent > about-section > section > div > div > div > div:nth-child(2) > div:hover {
+  border-color: #00EBC7;
+  opacity: 0.9;
+}
+
+#mainContent > about-section > section > div > div > div > div:nth-child(1) > div,
+#mainContent > about-section > section > div > div > div > div:nth-child(2) > div {
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+#mainContent > about-section > section > div > div > div > div:nth-child(1) > div:hover,
+#mainContent > about-section > section > div > div > div > div:nth-child(2) > div:hover {
+  border-color: #00EBC7;
+  transform: scale(1.05);
+}
+
+.heading-about h2 {
+  font-size: 32px;
   color: #00214D;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.card-stolen {
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  border: none;
+about-section p {
+  text-align: justify;
+  font-size: 16px;
 }
 
-.card-img {
-  width: 100px;
-}
-
-/* ========== STOLEN ========== */
+/* ========== ABOUT ========== */
 
 /* ========== COMMUNITY ========== */
 
@@ -207,25 +257,25 @@ community-section {
   border-bottom: 1px solid #eee;
 }
 
-.heading-community {
+.community-section .heading-community {
   margin-top: 8rem;
 }
 
-.heading-community h2 {
+.community-section .heading-community h2 {
   font-size: 36px;
   color: #00214D;
   font-weight: bold;
 }
 
-.row-card {
+.community-section .row-card {
   margin-bottom: 4rem;
 }
 
-.card-title-community {
+.community-section .card-title-community {
   font-size: 16px;
 }
 
-.badge {
+.community-section .badge {
   font-size: 10px;
   font-weight: 400;
   margin-bottom: 5px;
@@ -389,6 +439,16 @@ community-section {
 
   .heading-statistic p {
     font-size: 12px;
+  }
+
+  #mainContent > about-section > section > div > div > p{
+    font-size: 14px;
+  }
+
+  #mainContent > about-section > section > div > div > div > div:nth-child(1) > div > div > p, 
+  #mainContent > about-section > section > div > div > div > div:nth-child(2) > div > div > p{
+    font-size: 12px;
+    text-align: center;
   }
 
   .card-statistic {

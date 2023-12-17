@@ -12,7 +12,7 @@ class Header extends HTMLElement {
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
                     <div class="container-fluid">
-                        <a class="navbar-brand ms-5" href="#"><i class="fa-solid fa-motorcycle"></i> MotositeFindr</a>
+                        <a class="navbar-brand ms-5" href="#"><img src="./images/logo/logo.png" alt="Bootstrap" width="30" height="30">MotositeFindr</a>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

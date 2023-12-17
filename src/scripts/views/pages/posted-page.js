@@ -29,9 +29,7 @@ const PostedPage = {
                         </ul>
                     </div>
                     <br>
-
-                    <a href="#/searchpages"><button class="btn-search" type="button" id="searchButton">Search</button></a>
-
+                        <a href="#/searchpages"><button class="btn-search" type="button" id="searchButton">Search</button></a>
                     </div>
                 </div>
             </section>
@@ -62,7 +60,6 @@ const PostedPage = {
         const searchElement = document.querySelector('#searchInput');
         const motorContainer = document.querySelector('#listPost');
         const filterDropdown = document.querySelector('.dropdown-menu');
-        const searchButton = document.querySelector('#searchButton'); // Tambahkan ini
 
         const dataMotor = await MotorSource.listMotor();
         dataMotor.forEach((motor) => {
@@ -98,8 +95,7 @@ const PostedPage = {
                 throw error;
             }
         };
-
-        searchButton.addEventListener('click', onButtonSearchClicked); // Tambahkan ini
+        searchElement.clickEvent = onButtonSearchClicked;
 
         filterDropdown.addEventListener('click', async (event) => {
             event.preventDefault();

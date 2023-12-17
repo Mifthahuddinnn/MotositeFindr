@@ -5,9 +5,9 @@ class Community extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <section class="community">
+    <section class="community community-section">
       <div class="container">
-        <div class="row-card row">
+        <div class="row-card row mt-3">
 
           <div class="heading-community col col-sm-6 text-center">
             <h2>Community Help</h2>
@@ -15,29 +15,25 @@ class Community extends HTMLElement {
           </div>
 
           <div class="col col-sm-3">
-
             <div class="card-community card mt-2 mb-5" data-aos="fade-up" style="width: 14rem;">
-              <img src="./images/heros/gambar-dasar.jpg" class="card-img-top" alt="...">
+              <img src="./images/img/community1.png" class="card-img-top object-fit-cover" style="height: 200px; width: 100%; object-fit: cover; alt="...">
               <div class="card-body">
-                <h5 class="card-title-community">Lost my motorcycle, any help is appreciated</h5>
+                <h5 class="card-title-community">Ditemukan Motor Listrik</h5>
                 <span class="badge bg-secondary">Motorcycle Help</span>
-                <p class="card-text"><i class="fa-solid fa-user"></i> JohnDoe</p>
+                <p class="card-text">P 1554 RP</p>
               </div>
             </div>
-
           </div>
 
           <div class="col col-sm-3">
-
             <div class="card-community card mt-2 mb-5" data-aos="fade-right" style="width: 15rem;">
-              <img src="./images/heros/gambar-dasar.jpg" class="card-img-top" alt="...">
+              <img src="./images/img/community2.jpeg" class="card-img-top object-fit-cover" style="height: 200px; width: 100%; object-fit: cover; alt="...">
               <div class="card-body">
-                <h5 class="card-title-community">Lost my motorcycle, any help is appreciated</h5>
+                <h5 class="card-title-community">Dicari Motor Vino</h5>
                 <span class="badge bg-secondary">Suspected Theft</span>
-                <p class="card-text"><i class="fa-solid fa-user"></i> JohnDoe</p>
+                <p class="card-text">P 1234 LK</p>
               </div>
             </div>
-
           </div>
 
         </div>

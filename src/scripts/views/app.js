@@ -1,7 +1,7 @@
 import '../components/header';
 import '../components/jumbotron';
 import '../components/statistic';
-import '../components/stolen';
+import '../components/about';
 import '../components/community';
 import '../components/footer';
 import UrlParser from '../routes/url-parser';

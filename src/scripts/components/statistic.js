@@ -8,7 +8,7 @@ class Statistic extends HTMLElement {
     <section class="statistic">
       <div class="container">
         <div class="row">
-          <div class="heading-statistic col col-sm-6 text-center">
+          <div class="heading-statistic col col-sm-6 text-center p-5">
             <h2>Motorcycle Theft Statistics</h2>
             <p>Learn about the prevalence of motorcycle theft</p>
           </div>
