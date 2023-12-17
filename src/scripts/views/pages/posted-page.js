@@ -47,7 +47,7 @@ const PostedPage = {
         
         <section class="post">
             <div class="container">
-                <div class="row" id="listPost">
+                <div class="row" id="listPost2">
                         
                 </div>
             </div>
@@ -62,15 +62,15 @@ const PostedPage = {
         const searchElement = document.querySelector('#searchInput');
         const motorContainer = document.querySelector('#listPost');
         const filterDropdown = document.querySelector('.dropdown-menu');
+        const searchButton = document.querySelector('#searchButton'); // Tambahkan ini
 
         const dataMotor = await MotorSource.listMotor();
         dataMotor.forEach((motor) => {
             motorContainer.innerHTML += postList(motor);
-        })
+        });
 
         const renderResult = (results) => {
             if (results && Array.isArray(results.motors)) {
-                // Clear previous content
                 motorContainer.innerHTML = '';
 
                 results.motors.forEach((motor) => {
@@ -94,11 +94,12 @@ const PostedPage = {
                 console.log("result: ", result);
                 renderResult(result);
             } catch (error) {
-                console.error('Error posting comment:', error);
+                console.error('Error searching motor:', error);
                 throw error;
             }
         };
-        searchElement.clickEvent = onButtonSearchClicked;
+
+        searchButton.addEventListener('click', onButtonSearchClicked); // Tambahkan ini
 
         filterDropdown.addEventListener('click', async (event) => {
             event.preventDefault();
@@ -119,7 +120,7 @@ const PostedPage = {
                         break;
                 }
 
-                renderResult({ motors: sortedData }); // Sesuaikan dengan format data yang diperlukan
+                renderResult({ motors: sortedData });
             } catch (error) {
                 console.error('Error fetching and rendering sorted data:', error);
                 throw error;
