@@ -71,8 +71,6 @@ const detailPostCreator = (motor) => `
           `).join('')}
           </div>
 
-          <button class="btn-comment-more btn" type="button">Load More</button>
-
         </div>
 `;
 

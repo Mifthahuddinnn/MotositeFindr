@@ -36,7 +36,7 @@ const PostedPage = {
             <section class="post">
                 <div class="container">
                     <div class="row" id="listPost">
-                        
+                    
                     </div>
                 </div>
                 </div>

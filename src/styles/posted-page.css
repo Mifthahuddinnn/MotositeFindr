@@ -26,10 +26,14 @@
 @media screen and (max-width: 768px) {
 
   .card-searchpages {
-    width: 9rem !important;
-    margin-left: 5px;
-    margin-right: 5px;
+    width: 10rem !important;
     font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-searchpages img {
+    width: 100% !important;
   }
 
 }
@@ -70,7 +74,7 @@
   }
 }
 
-@media screen and (min-width: 577px) and (max-width: 768px) {
+/* @media screen and (min-width: 577px) and (max-width: 768px) {
   .searchpages {
     margin-top: -3rem !important;
   }
@@ -85,7 +89,7 @@
     font-size: 14px;
     text-align: left;
   }
-}
+} */
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
   .searchpages {
