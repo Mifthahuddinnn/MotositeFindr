@@ -37,6 +37,29 @@
 #### Jika berhasil comment akan tampil 
 <img width="1269" alt="image" src="https://github.com/Mifthahuddinnn/MotositeFindr/assets/142136573/46b1e5db-e565-4e69-8845-5ab150915d66">
 
+#### Click button tambah untuk membuat postingan
+<img width="1263" alt="image" src="https://github.com/Mifthahuddinnn/MotositeFindr/assets/142136573/7caacfa8-8e37-46eb-81fe-cefec5c8153d">
+
+#### Click get started
+<img width="1272" alt="image" src="https://github.com/Mifthahuddinnn/MotositeFindr/assets/142136573/7488a048-870d-4442-9631-303f8650f2f8">
+
+#### Isi seluruh form 
+<img width="1267" alt="image" src="https://github.com/Mifthahuddinnn/MotositeFindr/assets/142136573/07670649-2f9b-4ba5-bbc9-d103acd9b07f">
+
+#### Click Submit jika sudah
+<img width="1254" alt="image" src="https://github.com/Mifthahuddinnn/MotositeFindr/assets/142136573/9c843bb5-5add-4771-9c05-5cdac6478878">
+
+#### Jika berhasil akan diarahkan ke page post
+<img width="1267" alt="image" src="https://github.com/Mifthahuddinnn/MotositeFindr/assets/142136573/b0cfd7bf-38bb-409b-af49-e5ff3291ecba">
+
+#### Post berhasil dibuat
+<img width="1267" alt="image" src="https://github.com/Mifthahuddinnn/MotositeFindr/assets/142136573/65b51b8f-11a1-46ed-bf07-6b4a54333e25">
+
+
+
+
+
+
 
 
 
