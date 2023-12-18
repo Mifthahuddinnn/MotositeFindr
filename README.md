@@ -55,6 +55,16 @@
 #### Post berhasil dibuat
 <img width="1267" alt="image" src="https://github.com/Mifthahuddinnn/MotositeFindr/assets/142136573/65b51b8f-11a1-46ed-bf07-6b4a54333e25">
 
+#### Contact Us, isi seluruh form
+<img width="1268" alt="image" src="https://github.com/Mifthahuddinnn/MotositeFindr/assets/142136573/d7f0105e-c253-4ecd-af4d-4ccafe478c0c">
+
+#### Akan tampil alert, pilih yes, send it jika ingin mengirim
+<img width="1264" alt="image" src="https://github.com/Mifthahuddinnn/MotositeFindr/assets/142136573/9b34ab27-1f40-41bd-9605-eeb71116e04a">
+
+#### Jika berhasil akan tampil alert Success
+<img width="1257" alt="image" src="https://github.com/Mifthahuddinnn/MotositeFindr/assets/142136573/57a150f0-9fa7-4382-9045-b63b6779b220">
+
+
 
 
 
