@@ -4,10 +4,12 @@ import API_ENDPOINT from "../globals/api-endpoint";
 class MotorSource {
   static getAuthToken() {
     return localStorage.getItem('authToken');
+
+
   }
 
   static async register(data) {
-    try{
+    try {
       const response = await fetch(API_ENDPOINT.REGISTER, {
         method: 'POST',
         headers: {
@@ -16,12 +18,28 @@ class MotorSource {
         body: JSON.stringify(data),
       });
 
-      if (response.ok){
+      if (response.ok) {
+        // Registration success
+        Swal.fire({
+          icon: 'success',
+          title: 'Registration Successful',
+          text: 'You have successfully registered. Please login to continue.',
+        });
+
+        // Redirect to login page
         window.location.href = '#/login';
+      } else {
+        // Registration failed
+        const responseJson = await response.json();
+        const errorMessage = responseJson.message || 'Registration failed. Please try again.';
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Registration Failed',
+          text: errorMessage,
+        });
       }
-      const responseJson = await response.json();
-      return responseJson;
-    }catch (error){
+    } catch (error) {
       console.error('Error fetching data:', error);
       throw error;
     }
@@ -40,11 +58,20 @@ class MotorSource {
       const responseData = await response.json();
 
       // Store the token in localStorage
-      localStorage.setItem('authToken', responseData.token);
-
-      // Redirect to the search pages
-      window.location.href = '#/searchpages';
-      window.location.reload();
+      if (responseData.token !== undefined) {
+        // Store the token in localStorage
+        localStorage.setItem('authToken', responseData.token);
+  
+        window.location.href = '#/searchPages';
+        window.location.reload();
+      } else {
+        // Jika token undefined, tampilkan pesan login failed
+        Swal.fire({
+          icon: 'error',
+          title: 'Login Failed',
+          text: 'Please check your credentials and try again.',
+        });
+      }
     } catch (error) {
       console.error('Login failed:', error.message);
       // Show a SweetAlert2 error message
@@ -61,15 +88,28 @@ class MotorSource {
   }
 
   static async listMotor() {
+    const loader = document.getElementById('loader');
+    
+    // Show loader
+    if(loader) loader.style.display = 'block';
+  
     try {
       const response = await fetch(API_ENDPOINT.LIST);
       if (!response.ok) {
         throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
       }
       const responseJson = await response.json();
+  
+      // Hide loader
+      if(loader) loader.style.display = 'none';
+  
       return responseJson.motors;
     } catch (error) {
       console.error('Error fetching data:', error);
+  
+      // Hide loader in case of error
+      if(loader) loader.style.display = 'none';
+  
       throw error;
     }
   }
@@ -221,7 +261,7 @@ class MotorSource {
       if(response.ok){
         window.location.href = `#/detail/${idMotor}`;
         window.location.reload();
-      }else if (response.status === 404) {
+      }else if (response.status === 403) {
         console.error('User is not the owner of the comment');
         Swal.fire({
           icon: 'error',

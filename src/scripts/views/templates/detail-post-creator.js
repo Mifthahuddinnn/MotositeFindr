@@ -18,8 +18,8 @@ const detailPostCreator = (motor) => `
             </div>
 
             <div class="row">
-            <p class="spec-detail-title col col-sm-3">Date and Time:</p>
-            <p class="spec-detail-desc col col-sm-7">${motor.dateTime}</p>
+            <p class="spec-detail-title col col-sm-3">Missing Date:</p>
+            <p class="spec-detail-desc col col-sm-7">${motor.missingDate}</p>
             </div>
 
             <h5 class="title-desc mt-3">Description</h5>
@@ -70,9 +70,6 @@ const detailPostCreator = (motor) => `
             </p>
           `).join('')}
           </div>
-
-          <button class="btn-comment-more btn" type="button">Load More</button>
-
         </div>
 `;
 

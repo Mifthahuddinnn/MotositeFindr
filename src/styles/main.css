@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Quicksand:wght@500;700&family=Source+Sans+3:wght@200;300;400;500;600&family=Viga&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Quicksand:wght@500;700&family=Source+Sans+3:wght@200;300;400;500;600&family=Viga&display=swap");
 
 /* * {
   font-family: 'Poppins';
@@ -6,10 +6,10 @@
 } */
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
   /* background-color: #fffdf8; */
 }
 
@@ -31,12 +31,16 @@ html {
 
 .navbar-brand {
   padding: 12px 0;
-  color: #00214D;
+  color: #00214d;
   font-weight: 500;
 }
 
+.navbar-brand img {
+  width: 3rem;
+}
+
 .nav-link {
-  color: #00214D;
+  color: #00214d;
 }
 
 .navbar-toggler {
@@ -49,7 +53,7 @@ html {
 
 .btn-log {
   border-radius: 6px;
-  background-color: #00EBC7;
+  background-color: #00ebc7;
 }
 
 .btn-log a {
@@ -70,17 +74,17 @@ jumbotron-section {
 jumbotron-section h1 {
   font-size: 44px;
   font-weight: bold;
-  color: #00214D;
+  color: #00214d;
   margin-top: 8rem;
 }
 
 jumbotron-section p {
   font-size: 18px;
-  color: #00214D;
+  color: #00214d;
 }
 
 .form-control {
-  width: 310px;
+  width: 380px;
   margin-top: 2rem;
   margin-bottom: 1rem;
   margin-left: auto;
@@ -90,7 +94,7 @@ jumbotron-section p {
 .btn-filter {
   width: 140px;
   height: 48px;
-  border: 1px solid #00214D;
+  border: 1px solid #00214d;
   border-radius: 6px;
   background-color: #fff;
   font-size: 18px;
@@ -99,7 +103,7 @@ jumbotron-section p {
 
 .btn-filter a {
   text-decoration: none;
-  color: #00214D;
+  color: #00214d;
 }
 
 .btn-filter:hover {
@@ -111,14 +115,14 @@ jumbotron-section p {
   height: 48px;
   border: none;
   border-radius: 6px;
-  background-color: #00EBC7;
+  background-color: #00ebc7;
   font-size: 18px;
   font-weight: 400;
 }
 
 .btn-search a {
   text-decoration: none;
-  color: #00214D;
+  color: #00214d;
 }
 
 .btn-search:hover {
@@ -147,7 +151,7 @@ statistic-section {
 
 .heading-statistic h2 {
   font-size: 36px;
-  color: #00214D;
+  color: #00214d;
   font-weight: bold;
   margin-top: 6rem;
 }
@@ -157,7 +161,7 @@ statistic-section {
 }
 
 .img-fluid {
-  margin-top: -.5px !important;
+  margin-top: -0.5px !important;
 }
 
 .card-title {
@@ -174,7 +178,7 @@ statistic-section {
 
 about-section {
   margin-top: 5rem;
-  padding: 2rem 0; 
+  padding: 2rem 0;
   border-bottom: 1px solid #eee;
 }
 
@@ -182,63 +186,175 @@ about-section .about {
   text-align: justify;
 }
 
-#mainContent > about-section > section > div > div > div > div:nth-child(1) > div {
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div {
   border: 1px solid #ccc;
   padding: 15px;
   margin-bottom: 20px;
   transition: border-color 0.3s ease;
 }
 
-#mainContent > about-section > section > div > div > div > div:nth-child(1) > div:hover {
-  border-color: #00EBC7;
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div:hover {
+  border-color: #00ebc7;
 }
 
-#mainContent > about-section > section > div > div > div > div:nth-child(2) > div {
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(2)
+  > div {
   border: 1px solid #ccc;
   padding: 15px;
   margin-bottom: 20px;
   transition: border-color 0.3s ease;
 }
 
-#mainContent > about-section > section > div > div > div > div:nth-child(2) > div:hover {
-  border-color: #00EBC7;
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(2)
+  > div:hover {
+  border-color: #00ebc7;
 }
 
-#mainContent > about-section > section > div > div > div > div:nth-child(1) > div,
-#mainContent > about-section > section > div > div > div > div:nth-child(2) > div {
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div,
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(2)
+  > div {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#mainContent > about-section > section > div > div > div > div:nth-child(1) > div:hover,
-#mainContent > about-section > section > div > div > div > div:nth-child(2) > div:hover {
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div:hover,
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(2)
+  > div:hover {
   box-shadow: 0 8px 16px rgba(0, 235, 199, 0.3);
 }
 
-#mainContent > about-section > section > div > div > div > div:nth-child(1) > div,
-#mainContent > about-section > section > div > div > div > div:nth-child(2) > div {
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div,
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(2)
+  > div {
   transition: border-color 0.3s ease, opacity 0.3s ease;
 }
 
-#mainContent > about-section > section > div > div > div > div:nth-child(1) > div:hover,
-#mainContent > about-section > section > div > div > div > div:nth-child(2) > div:hover {
-  border-color: #00EBC7;
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div:hover,
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(2)
+  > div:hover {
+  border-color: #00ebc7;
   opacity: 0.9;
 }
 
-#mainContent > about-section > section > div > div > div > div:nth-child(1) > div,
-#mainContent > about-section > section > div > div > div > div:nth-child(2) > div {
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div,
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(2)
+  > div {
   transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-#mainContent > about-section > section > div > div > div > div:nth-child(1) > div:hover,
-#mainContent > about-section > section > div > div > div > div:nth-child(2) > div:hover {
-  border-color: #00EBC7;
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(1)
+  > div:hover,
+#mainContent
+  > about-section
+  > section
+  > div
+  > div
+  > div
+  > div:nth-child(2)
+  > div:hover {
+  border-color: #00ebc7;
   transform: scale(1.05);
 }
 
 .heading-about h2 {
   font-size: 32px;
-  color: #00214D;
+  color: #00214d;
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -263,7 +379,7 @@ community-section {
 
 .community-section .heading-community h2 {
   font-size: 36px;
-  color: #00214D;
+  color: #00214d;
   font-weight: bold;
 }
 
@@ -284,18 +400,14 @@ community-section {
 
 /* ========== COMMUNITY ========== */
 
-
 .footer-text {
-  color: #00214D;
+  color: #00214d;
   font-weight: 500;
 }
 
-
 /* responsive */
 
-
 @media screen and (max-width: 991px) {
-
   .navbar-brand {
     margin-left: 5px !important;
   }
@@ -309,11 +421,9 @@ community-section {
     width: 100px;
     margin: 0 auto;
   }
-
 }
 
 @media screen and (max-width: 768px) {
-
   .btn-log {
     width: 100px;
     margin: 0 auto;
@@ -370,12 +480,9 @@ community-section {
   .card-title-community {
     font-size: 13px;
   }
-
 }
 
-
 @media screen and (max-width: 390px) {
-
   .navbar-nav {
     margin-bottom: 1.5rem;
   }
@@ -433,7 +540,7 @@ community-section {
     width: 325px;
     font-size: 24px;
     margin-top: 4rem;
-    margin-left: auto;
+    margin-left: -2rem;
     margin-right: auto;
   }
 
@@ -441,12 +548,30 @@ community-section {
     font-size: 12px;
   }
 
-  #mainContent > about-section > section > div > div > p{
+  #mainContent > about-section > section > div > div > p {
     font-size: 14px;
   }
 
-  #mainContent > about-section > section > div > div > div > div:nth-child(1) > div > div > p, 
-  #mainContent > about-section > section > div > div > div > div:nth-child(2) > div > div > p{
+  #mainContent
+    > about-section
+    > section
+    > div
+    > div
+    > div
+    > div:nth-child(1)
+    > div
+    > div
+    > p,
+  #mainContent
+    > about-section
+    > section
+    > div
+    > div
+    > div
+    > div:nth-child(2)
+    > div
+    > div
+    > p {
     font-size: 12px;
     text-align: center;
   }
@@ -459,7 +584,7 @@ community-section {
   }
 
   .img-fluid {
-    margin-top: -.5px !important;
+    margin-top: -0.5px !important;
   }
 
   .card-title {
@@ -470,7 +595,6 @@ community-section {
   .card-text {
     font-size: 12px;
   }
-
 
   stolen-section {
     margin-top: 15rem;
@@ -483,7 +607,7 @@ community-section {
   .heading-stolen h2 {
     width: 320px;
     font-size: 24px;
-    color: #00214D;
+    color: #00214d;
     font-weight: bold;
     margin-top: -38rem;
     margin-left: auto;
@@ -521,7 +645,7 @@ community-section {
 
   .heading-community h2 {
     font-size: 24px;
-    color: #00214D;
+    color: #00214d;
     font-weight: bold;
   }
 
@@ -533,6 +657,7 @@ community-section {
   }
 
   .card-community {
+    height: 250px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -543,11 +668,47 @@ community-section {
   }
 
   .footer-text {
-    color: #00214D;
+    color: #00214d;
     font-weight: 500;
     font-size: 12px;
     margin-left: auto;
     margin-right: auto;
   }
+}
 
+/* loader */
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #25b09b;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
+
+
+@media screen and (max-width: 576px) {
+  .card-statistic {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 491px) {
+  .form-control {
+    width: 280px !important;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

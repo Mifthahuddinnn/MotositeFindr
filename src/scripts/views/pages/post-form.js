@@ -17,7 +17,7 @@ const FormPost = {
 
                 <div class="mb-4">
                   <label for="title" class="form-label">Title</label>
-                  <input type="text" id="title" name="title" class="form-control" placeholder="Enter motorcycle license plate">
+                  <input type="text" id="title" name="title" class="form-control" placeholder="Enter motorcycle title">
                 </div>
 
                 <div class="mb-4">
@@ -31,8 +31,8 @@ const FormPost = {
                 </div>
 
                 <div class="mb-4">
-                  <label for="dateTime" class="form-label">Date and Time</label>
-                  <input type="date" id="dateTime" name="dateTIme" class="form-control" placeholder="Enter date and time when the motorcycle was lostm">
+                  <label for="dateTime" class="form-label">Missing Date</label>
+                  <input type="date" id="dateTime" name="dateTIme" class="form-control" placeholder="Enter missing date when the motorcycle was lostm">
                 </div>
 
                 <div class="mb-5">
@@ -113,7 +113,7 @@ const FormPost = {
       formData.append('motor[title]', title);
       formData.append('motor[licensePlate]', licensePlate);
       formData.append('motor[model]', model);
-      formData.append('dateTime', dateTime);
+      formData.append('motor[missingDate]', dateTime);
       formData.append('image', image);
       formData.append('motor[description]', description);
 

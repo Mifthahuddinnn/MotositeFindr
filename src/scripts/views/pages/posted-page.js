@@ -7,8 +7,8 @@ require('@fortawesome/fontawesome-free/css/all.min.css');
 const PostedPage = {
     async render() {
         return `
-        <section class="jumbotron">
-            <div class="p-5 mb-5">
+        <section class="jumbotron-post">
+            <div class="p-5">
                 <div class="container-fluid py-5">
                 <h1 class="fw-bold text-center pt-5" data-aos="fade-right">Find Your Lost Motorcycle</h1>
                 <p class="text-center" data-aos="fade-left">Enter the details of your lost motorcycle to start the search</p>
@@ -61,17 +61,12 @@ const PostedPage = {
                 motorContainer.innerHTML = '';
         
                 results.motors.forEach((motor) => {
-                    const newElement = document.createElement('div');
-                    newElement.innerHTML = postList(motor);
-                    motorContainer.appendChild(newElement);
+                    motorContainer.innerHTML += postList(motor);
                 });
             } else {
                 console.error('Results.motors is not an array:', results);
         
-                const newElement = document.createElement('div');
-                newElement.innerHTML = postList(results);
-                motorContainer.innerHTML = '';
-                motorContainer.appendChild(newElement);
+                motorContainer.innerHTML += postList(motor);
             }
         };
 
@@ -107,7 +102,7 @@ const PostedPage = {
                         break;
                 }
 
-                renderResult({ motors: sortedData }); // Sesuaikan dengan format data yang diperlukan
+                renderResult({ motors: sortedData });
             } catch (error) {
                 console.error('Error fetching and rendering sorted data:', error);
                 throw error;

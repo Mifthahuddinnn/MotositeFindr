@@ -21,7 +21,7 @@ const Register = {
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
 
-                <label for="fullname" class="form-label">Name</label>
+                <label for="fullname" class="form-label">Fullname</label>
                 <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter your name" required>
 
                 <label for="email" class="form-label">Email</label>
@@ -76,26 +76,7 @@ const Register = {
         email,
         password,
       };
-
-      try {
-        await MotorSource.register(dataInput);
-        Swal.fire({
-          icon: 'success',
-          title: 'Registration Successful',
-          text: 'You have successfully registered!',
-          confirmButtonColor: '#00EBC7',
-          color: '#00214D',
-        });
-      } catch (error) {
-        console.error('Error during registration:', error);
-        Swal.fire({
-          icon: 'error',
-          title: 'Registration Failed',
-          text: 'An unexpected error occurred. Please try again later.',
-          confirmButtonColor: '#00EBC7',
-          color: '#00214D',
-        });
-      }
+      MotorSource.register(dataInput);
     };
 
     document.querySelector('.btn-register').addEventListener('click', registerFunction);

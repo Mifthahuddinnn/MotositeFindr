@@ -11,7 +11,7 @@
 .heading-contact h2 {
   text-align: left;
   font-size: 36px;
-  color: #00214D;
+  color: #00214d;
   font-weight: bold;
   margin-left: 4rem;
 }
@@ -39,8 +39,8 @@
 
 .btn-contact {
   width: 400px;
-  color: #00214D;
-  background-color: #00EBC7;
+  color: #00214d;
+  background-color: #00ebc7;
   font-size: 16px;
   font-weight: 600;
   margin-top: 2rem;
@@ -51,27 +51,57 @@
   background-color: #08d6b7;
 }
 
-
-
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 991px) {
   .heading-contact h2 {
+    width: 250px;
+    font-size: 30px;
     margin-top: -4rem;
+    margin-left: -3rem;
+    margin-right: auto;
+  }
+
+  .heading-contact p {
+    width: 350px;
+    font-size: 14px;
+    margin-left: -3rem;
   }
 
   .form-contact .form-control {
-    width: 300px;
+    width: 350px;
     font-size: 12px;
   }
 
   .btn-contact {
-    width: 300px;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading-contact h2 {
+    width: 250px;
+    font-size: 24px;
+    margin-top: -2rem;
+    margin-left: -3rem !important;
+    margin-right: auto;
   }
 
+  .heading-contact p {
+    width: 300px !important;
+    font-size: 12px;
+    margin-left: -3rem !important;
+  }
+
+  .form-contact .form-control {
+    width: 300px !important;
+    font-size: 12px;
+  }
+
+  .btn-contact {
+    width: 300px !important;
+  }
 }
 
 @media screen and (max-width: 576px) {
-
   .heading-contact h2 {
     width: 250px;
     font-size: 24px;
@@ -89,12 +119,9 @@
   .form-contact {
     margin-top: -20rem;
   }
-
 }
 
-
 @media screen and (max-width: 390px) {
-
   .contact {
     margin-top: 5px;
   }
@@ -104,32 +131,55 @@
   }
 
   .heading-contact h2 {
-    width: 250px;
-    font-size: 24px;
+    width: 250px !important;
+    font-size: 24px !important;
     margin-top: -6rem;
-    margin-left: 2.4rem;
+    margin-left: 0.5rem !important;
     margin-right: auto;
   }
 
   .heading-contact p {
     width: 270px;
-    font-size: 12px;
-    margin-left: 2.4rem;
+    font-size: 12px !important;
+    margin-left: 0.5rem !important;
   }
 
   .form-contact {
-    margin-top: .1px;
+    margin-top: 0.1px;
   }
 
   .form-contact .form-control {
-    width: 340px;
+    width: 340px !important;
   }
 
   .btn-contact {
-    width: 340px;
+    width: 340px !important;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 4rem;
   }
+}
 
+@media screen and (max-width: 1195px) {
+  .heading-contact h2 {
+    width: 250px;
+    font-size: 30px;
+    margin-left: -2rem;
+    margin-right: auto;
+  }
+
+  .heading-contact p {
+    width: 400px;
+    font-size: 14px;
+    margin-left: -2rem;
+  }
+
+  .form-contact .form-control {
+    width: 400px;
+    font-size: 12px;
+  }
+
+  .btn-contact {
+    width: 400px;
+  }
 }

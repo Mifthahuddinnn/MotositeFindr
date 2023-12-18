@@ -118,6 +118,7 @@ const Contact = {
               confirmButtonText: "OK",
               confirmButtonColor: "#00EBC7"
             }).then(() => {
+              window.location.reload();
               console.log("User clicked OK");
             });
           });

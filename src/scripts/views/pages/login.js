@@ -17,15 +17,11 @@ const Login = {
                     <p>See what is going on with your business</p>
 
                     <div class="form-login mb-3">
-                        <label for="email" class="form-label">email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your username"/>
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"/>
 
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password"/>
-                    </div>
-
-                    <div class="forgot mb-4 text-center">
-                        <a href="#">Forgot Password?</a>
                     </div>
 
                     <div class="d-grid gap-2">
